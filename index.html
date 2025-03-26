@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queue Implementation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Queue Implementation</h1>
+
+    <!-- Queue Controls for Array-based Queue -->
+    <div class="controls">
+        <input type="number" id="inputValue" placeholder="Enter value for Array Queue" />
+        <button onclick="pushArray()">Enqueue (Array)</button>
+        <button onclick="popArray()">Dequeue (Array)</button>
+    </div>
+
+    <!-- Queue Controls for Linked List-based Queue -->
+    <div class="controls">
+        <input type="number" id="inputValueLinkedList" placeholder="Enter value for Linked List Queue" />
+        <button onclick="pushLinkedList()">Enqueue (Linked List)</button>
+        <button onclick="popLinkedList()">Dequeue (Linked List)</button>
+    </div>
+
+    <!-- Search Controls for Array-based Queue -->
+    <div class="controls">
+        <input type="number" id="searchArrayValue" placeholder="Search Array by Data" />
+        <button onclick="searchInArrayByData()">Search Data (Array)</button>
+
+        <input type="number" id="searchArrayPosition" placeholder="Search Array by Position" />
+        <button onclick="searchInArrayByPosition()">Search Position (Array)</button>
+    </div>
+
+    <!-- Search Controls for Linked List-based Queue -->
+    <div class="controls">
+        <input type="number" id="searchLinkedListValue" placeholder="Search Linked List by Data" />
+        <button onclick="searchInLinkedListByData()">Search Data (Linked List)</button>
+
+        <input type="number" id="searchLinkedListPosition" placeholder="Search Linked List by Position" />
+        <button onclick="searchInLinkedListByPosition()">Search Position (Linked List)</button>
+    </div>
+    
+    <!-- Queue Displays -->
+    <div class="queue-container">
+        <div class="queue-box">
+            <h2>Array-based Queue</h2>
+            <p id="arrayQueueMessage" class="empty-message">The array-based queue is empty.</p>
+            <div id="arrayQueue" class="queue"></div>
+        </div>
+
+        <div class="queue-box">
+            <h2>Linked List-based Queue</h2>
+            <p id="linkedListQueueMessage" class="empty-message">The linked list-based queue is empty.</p>
+            <div id="linkedListQueue" class="queue">
+                <!-- Head node with "Head" arrow -->
+                <div class="number-box">Node Data</div>
+                <div class="arrow-container">
+                    <span class="arrow-label">Head</span>
+                    <img src="arrow.svg" class="arrow" alt="Arrow pointing to the next node">
+                </div>
+                
+                <!-- Subsequent nodes with arrows in between -->
+                <div class="number-box">Next Node Data</div>
+                <div class="arrow-container">
+                    <img src="arrow.svg" class="arrow" alt="Arrow pointing to the next node">
+                </div>
+
+                <!-- Tail node with "Tail" arrow -->
+                <div class="number-box">Tail Node Data</div>
+                <div class="arrow-container">
+                    <span class="arrow-label">Tail</span>
+                    <img src="arrow.svg" class="arrow" alt="Arrow pointing to the next node">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="commonMessage" class="common-message"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
